@@ -60,6 +60,18 @@ p {
 text-align: center;
 }
 }
+@media (max-width: 767px) {
+	.add-area h2 {
+		color: #212121;
+		margin-bottom: 25px;
+		font-size: 10px;
+	}
+	.add-area h2>span {
+		font-size: 30px;
+		line-height: 68px;
+		font-style: italic;
+	}
+}
 
   @media (max-width: 767px) {
     h1{
