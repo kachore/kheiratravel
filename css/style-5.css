@@ -24,6 +24,11 @@
 	list-style: none;
 	word-wrap: break-word;
 }
+.voir-plus{
+	text-align: end;
+	float:right;
+	justify-content: end;
+}
 
 html, body {
 	color: #585858;
@@ -184,7 +189,7 @@ select {
 }
 
 .ws-section-spacing {
-	padding: 100px 0 70px;
+	padding: 30px 0 80px;
 }
 
 .title-bottom-spacing {
