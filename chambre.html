@@ -243,96 +243,44 @@
         </div>
     </section>
     <!-- End-Package-Section -->
-             <!-- Modal Order Form -->
-             <div id="buy-ticket-modal1" class="modal fade">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Acheter un billet</h4>
-                            <button
-                                type="button"
-                                class="btn-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"
-                            ></button>
-                        </div>
-                        <div class="modal-body">
-                            <form method="POST">
-                               
-                                <div class="form-group">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        name="username"
-                                        placeholder="Nom et prenom"
-                                    />
-                                </div>
-                                <div class="form-group mt-3">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        value=""
-                                        name="email"
-                                        placeholder="Votre Email"
-                                    />
-                                </div>
-                                <div class="form-group mt-3">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        name="number"
-                                        placeholder="Telephone"
-                                    />
-                                </div>
-                                <p class="cat">Type de chambre</p>
-                                <div class="form-group mt-3">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="type-chambre"
-                                        name="type-chambre"
-                                        value="Standard 1"
-                                        readonly
-                                    />
-                                </div>
-                                <p class="cat">Montant</p>
-                                <div class="form-group mt-3">
-                                    <input
-                                        type="number"
-                                        class="form-control"
-                                        id="montant"
-                                        name="montant"
-                                        value="10000"
-                                        readonly
-                                    />
-                                </div>
-                                 <p class="cat">Date et heure d'arrivé</p>
-                                <div class="form-group mt-3">
-                                    <input
-                                        type="datetime-local"
-                                        class="form-control"
-                                        id="datetime"
-                                        name="datetime"
-                                      
-                                      
-                                    />
-                                </div>
-            
-                               
-            
-                                <div class="text-center mt-3">
-                                    <button type="submit" class="btn btn-outline-dark">
-                                        Payer
-                                    </button>
-                                </div>
-                            </form>
+    <div id="buy-ticket-modal1" class="modal fade">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Choisir un moyen</h4>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                   <div class="row  mju">
+                    <div class="col-md-3" id="whatsappDiv">
+                        <div class="icon-boxo">
+                            <i class="fab fa-whatsapp"></i>
                         </div>
                     </div>
-                    <!-- /.modal-content -->
+                    <div class="col-md-3" id="contactDiv">
+                        <div class="icon-boxo">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3" id="phoneDiv">
+                        <div class="icon-boxo">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                    </div>
+                    
+                   </div>
                 </div>
-                <!-- /.modal-dialog -->
             </div>
-            
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    
     <!-- offer-section -->
     <section class="offer-area-three same-section-spacing" data-aos="fade-up" data-aos-duration="2000">
         <div class="container">
@@ -521,6 +469,33 @@
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+
+
+
+
+
+
+
+    <script>
+        document.getElementById("contactDiv").addEventListener("click", function() {
+            window.location.href = "mailto:kheiratraveltoursagency@gmail.com";
+        });
+    </script>
+    
+    
+    <script>
+        document.getElementById("phoneDiv").addEventListener("click", function() {
+            window.location.href = "tel:+22962555922";
+        });
+    </script>
+    
+    
+    <script>
+        document.getElementById("whatsappDiv").addEventListener("click", function() {
+            window.open("https://wa.me/22962555922", "_blank");
+        });
+    </script>
 </body>
 
 </html>
