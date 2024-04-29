@@ -59,7 +59,7 @@ Author:         Company Name
         $('.hero-slide').slick({
             infinite: true,
             dots: true,
-            speed: 300,
+            speed: 400,
             slidesToShow: 1,
             slidesToScroll: 1,
         });

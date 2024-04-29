@@ -92,6 +92,27 @@ h3 a{
 .theme-btn{
 	text-decoration: none;
 }
+
+.icon-boxo{
+	justify-content: center;
+
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	background: #028c99;
+	border-radius: 50%;
+	font-size: 50px;
+	padding: 10px;
+	color: #fff;
+	margin-bottom: 5px;
+	box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.2);
+}
+
+.mju{
+	justify-content: center;
+	text-align: center;
+}
+
 @media (max-width: 767px) {
 .ws-section-spacing{
 	justify-content: center;
