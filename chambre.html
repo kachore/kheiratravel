@@ -26,6 +26,13 @@
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/style-5.css">
+
+
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -156,7 +163,11 @@
                         <p>1 nuits à partir de <span>20000f</span></p>
                         <p class="location"><span class="fas fa-map-marker-alt"></span> Cotonou,Akpakpa</p>
                         <ul class="ct-action">
-                            <li><a href="#" class="booking-btn">Reservez</a>
+                            <li><a href="#"
+                                data-bs-toggle="modal"
+                                    data-bs-target="#buy-ticket-modal1"
+                                    data-ticket-type="standard-access"
+                                class="booking-btn">Reservez</a>
                             </li>
                             <li>
                                 <i class="fa fa-star"></i>
@@ -180,7 +191,12 @@
                         <p>1 nuits à partir de <span>15000f</span></p>
                         <p class="location"><span class="fas fa-map-marker-alt"></span> Cotonou,Fidjrossè</p>
                         <ul class="ct-action">
-                            <li><a href="#" class="booking-btn">Reservez</a>
+                            <li><a href="#" 
+                                data-bs-toggle="modal"
+                                    data-bs-target="#buy-ticket-modal1"
+                                    data-ticket-type="standard-access"
+                                
+                                class="booking-btn">Reservez</a>
                             </li>
                             <li>
                                 <i class="fa fa-star"></i>
@@ -204,7 +220,11 @@
                         <p>1 nuits à partir de <span>20000f</span></p>
                         <p class="location"><span class="fas fa-map-marker-alt"></span> Cotonou,Fidjrossè</p>
                         <ul class="ct-action">
-                            <li><a href="#" class="booking-btn">Reservez</a>
+                            <li><a href="#" 
+                                data-bs-toggle="modal"
+                                    data-bs-target="#buy-ticket-modal1"
+                                    data-ticket-type="standard-access"
+                                 class="booking-btn">Reservez</a>
                             </li>
                             <li>
                                 <i class="fa fa-star"></i>
@@ -223,7 +243,96 @@
         </div>
     </section>
     <!-- End-Package-Section -->
-
+             <!-- Modal Order Form -->
+             <div id="buy-ticket-modal1" class="modal fade">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Acheter un billet</h4>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST">
+                               
+                                <div class="form-group">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="username"
+                                        placeholder="Nom et prenom"
+                                    />
+                                </div>
+                                <div class="form-group mt-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        value=""
+                                        name="email"
+                                        placeholder="Votre Email"
+                                    />
+                                </div>
+                                <div class="form-group mt-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="number"
+                                        placeholder="Telephone"
+                                    />
+                                </div>
+                                <p class="cat">Type de chambre</p>
+                                <div class="form-group mt-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="type-chambre"
+                                        name="type-chambre"
+                                        value="Standard 1"
+                                        readonly
+                                    />
+                                </div>
+                                <p class="cat">Montant</p>
+                                <div class="form-group mt-3">
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="montant"
+                                        name="montant"
+                                        value="10000"
+                                        readonly
+                                    />
+                                </div>
+                                 <p class="cat">Date et heure d'arrivé</p>
+                                <div class="form-group mt-3">
+                                    <input
+                                        type="datetime-local"
+                                        class="form-control"
+                                        id="datetime"
+                                        name="datetime"
+                                      
+                                      
+                                    />
+                                </div>
+            
+                               
+            
+                                <div class="text-center mt-3">
+                                    <button type="submit" class="btn btn-outline-dark">
+                                        Payer
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            
     <!-- offer-section -->
     <section class="offer-area-three same-section-spacing" data-aos="fade-up" data-aos-duration="2000">
         <div class="container">
@@ -409,7 +518,9 @@
         </script>
     <script src="js/main.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>

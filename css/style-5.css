@@ -48,12 +48,50 @@ p {
 	font-family: 'Roboto', sans-serif;
 }
 
+.hero-slider__btn{
+	text-decoration: none;
+}
+.site-button{
+	text-decoration: none;
+
+}
+.slide__link{
+	text-decoration: none;	
+}
+li a{
+	text-decoration: none;
+color: white;
+}
+h3 a{
+	text-decoration: none;
+	color: #000;
+}
+
+.huo{
+	
+	color:  #22A6B3;
+}
+@media (max-width: 767px) {
+	.logomobile {
+		margin-left: -25px;
+	}
+
+	.sew{
+		text-align: justify;
+	}
+
+	.package-content{
+		text-align: start;
+	float:left;
+	width: 100%;
+	justify-content: start;
+	}
 
 
-
-
-
-
+}
+.theme-btn{
+	text-decoration: none;
+}
 @media (max-width: 767px) {
 .ws-section-spacing{
 	justify-content: center;

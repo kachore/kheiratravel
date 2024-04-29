@@ -49,6 +49,17 @@
 
     <link rel="stylesheet" href="css/css/styledestino.css">
     <link rel="stylesheet" href="css/css/travel.css">
+
+
+
+
+
+    <!-- Vendor CSS Files -->
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -456,7 +467,11 @@
                             <h3>Cotonou – Ganvié</h3>
                             <p>1 Jours, 0 Nuits  à<span>      10.000f</span></p>
                             <ul class="ct-action">
-                                <li><a href="#" class="booking-btn">Reservez</a>
+                                <li><a href="#" 
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#buy-ticket-modal2"
+                                    data-ticket-type="standard-access"
+                                    class="booking-btn">Reservez</a>
                                 </li>
                                 <li>
                                     
@@ -475,7 +490,11 @@
                             <h3>Concert à Natitingou</h3>
                             <p>Samedi 20 juin 2024  <span> à partir de      5.000f</span></p>
                             <ul class="ct-action">
-                                <li><a href="#" class="booking-btn">Reservez</a>
+                                <li><a href="#"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#buy-ticket-modal2"
+                                    data-ticket-type="standard-access"
+                                    class="booking-btn">Reservez</a>
                                 </li>
                                 <li>
                                     
@@ -495,7 +514,13 @@
                             <h3>Parakou – Ouidah</h3>
                             <p>2 Jours, 1 Nuits  à<span>     30.000f</span></p>
                             <ul class="ct-action">
-                                <li><a href="#" class="booking-btn">Reservez</a>
+                                <li><a href="#" 
+                                    
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#buy-ticket-modal2"
+                                    data-ticket-type="standard-access"
+
+                                    class="booking-btn">Reservez</a>
                                 </li>
                                 <li>
                                   
@@ -535,7 +560,11 @@
                             <p>1 nuits à partir de <span>20000f</span></p>
                             <p class="location"><span class="fas fa-map-marker-alt"></span> Cotonou,Akpakpa</p>
                             <ul class="ct-action">
-                                <li><a href="#" class="booking-btn">Reservez</a>
+                                <li><a href="#"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#buy-ticket-modal1"
+                                    data-ticket-type="standard-access"
+                                     class="booking-btn">Reservez</a>
                                 </li>
                                 <li>
                                     <i class="fa fa-star"></i>
@@ -558,8 +587,12 @@
                             <h3><a href="#">Chambre Classique</a></h3>
                             <p>1 nuits à partir de <span>15000f</span></p>
                             <p class="location"><span class="fas fa-map-marker-alt"></span> Cotonou,Fidjrossè</p>
-                            <ul class="ct-action">
-                                <li><a href="#" class="booking-btn">Reservez</a>
+                            <ul class="ct-action ">
+                                <li ><a href="#"
+                                  
+                                     data-bs-toggle="modal"
+                                    data-bs-target="#buy-ticket-modal1"
+                                    data-ticket-type="standard-access" class="booking-btn">Reservez</a>
                                 </li>
                                 <li>
                                     <i class="fa fa-star"></i>
@@ -583,8 +616,11 @@
                             <p>1 nuits à partir de <span>20000f</span></p>
                             <p class="location"><span class="fas fa-map-marker-alt"></span> Cotonou,Fidjrossè</p>
                             <ul class="ct-action">
-                                <li><a href="#" class="booking-btn">Reservez</a>
-                                </li>
+                                <li><a href="#"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#buy-ticket-modal1"
+                                    data-ticket-type="standard-access"
+                                     class="booking-btn">Reservez</a>
                                 <li>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -603,7 +639,188 @@
         </div>
     </section>
     <!-- End-Package-Section -->
-  
+              
+             <!-- Modal Order Form -->
+ <div id="buy-ticket-modal1" class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Acheter un billet</h4>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST">
+                   
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="username"
+                            placeholder="Nom et prenom"
+                        />
+                    </div>
+                    <div class="form-group mt-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            value=""
+                            name="email"
+                            placeholder="Votre Email"
+                        />
+                    </div>
+                    <div class="form-group mt-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="number"
+                            placeholder="Telephone"
+                        />
+                    </div>
+                    <p class="cat">Type de chambre</p>
+                    <div class="form-group mt-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="type-chambre"
+                            name="type-chambre"
+                            value="Standard 1"
+                            readonly
+                        />
+                    </div>
+                    <p class="cat">Montant</p>
+                    <div class="form-group mt-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="montant"
+                            name="montant"
+                            value="10000"
+                            readonly
+                        />
+                    </div>
+                     <p class="cat">Date et heure d'arrivé</p>
+                    <div class="form-group mt-3">
+                        <input
+                            type="datetime-local"
+                            class="form-control"
+                            id="datetime"
+                            name="datetime"
+                          
+                          
+                        />
+                    </div>
+
+                   
+
+                    <div class="text-center mt-3">
+                        <button type="submit" class="btn btn-outline-dark">
+                            Payer
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+<div id="buy-ticket-modal2" class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Acheter un ticket</h4>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST">
+                   
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="username"
+                            placeholder="Nom et prenom"
+                        />
+                    </div>
+                    <div class="form-group mt-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            value=""
+                            name="email"
+                            placeholder="Votre Email"
+                        />
+                    </div>
+                    <div class="form-group mt-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="number"
+                            placeholder="Telephone"
+                        />
+                    </div>
+                    <p class="cat">Type de ticket</p>
+                    <div class="form-group mt-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="type-chambre"
+                            name="type-ticket"
+                            value="Standard 1"
+                            readonly
+                        />
+                    </div>
+                    <p class="cat">Nombre</p>
+                    <div class="form-group mt-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="type-chambre"
+                            name="type-ticket"
+                            value=""
+                            readonly
+                        />
+                    </div>
+                    <p class="cat">Montant</p>
+                    <div class="form-group mt-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="montant"
+                            name="montant"
+                            value="5000"
+                            readonly
+                        />
+                    </div>
+                
+
+                   
+
+                    <div class="text-center mt-3">
+                        <button type="submit" class="btn btn-outline-dark">
+                            Payer
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
     <!-- jetrip_travel_tour_area start -->
     <section class="jetrip_travel_tour_area pb-130 pt-130">
         <div class="container">
@@ -1049,6 +1266,24 @@
           
         });
     </script>
+
+
+
+
+
+
+
+
+
+      <!-- Vendor JS Files -->
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
