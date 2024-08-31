@@ -38,7 +38,24 @@ html, body {
 	font-family: 'Roboto', sans-serif;
 }
 
-
+.package-one{
+	border-radius: 12px;
+}
+.dgo{
+	border-radius: 12px;
+}
+.testi-content{
+	border-radius: 12px;
+}
+.dga{
+	border-radius: 10px;
+}
+.ed{
+	margin-bottom: 15px;
+}
+.dga1{
+	border-radius: 6px;
+}
 
 p {
 	font-size: 16px;
